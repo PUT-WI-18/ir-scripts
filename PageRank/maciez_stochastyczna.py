@@ -20,7 +20,6 @@ class Stochastic_matrix:
         self.__matrix_stochastic = self.__matrix_binary.copy()
         print(f"Twoja maciez binarna:\n{self.__matrix_binary}")
         self.calc_stochastic_matrix()
-        self.show_linear_equations()
 
     def two(self):
         print("Podawaj WIERSZE, po spacjach. Np.: $1 1 0 1\nSeparator liczb zmmiennoprzecinkowych to kropka")
@@ -43,7 +42,6 @@ class Stochastic_matrix:
         self.__matrix_binary = np.array(self.__matrix_binary)
         self.__matrix_stochastic = self.__matrix_binary.copy()
         print(f"Twoja maciez binarna:\n{self.__matrix_binary}")
-        self.show_linear_equations()
         self.calc_stochastic_matrix()
 
     def calc_stochastic_matrix(self):
@@ -54,6 +52,7 @@ class Stochastic_matrix:
                 self.__matrix_stochastic[:, i] = arr / size
 
         print(f"Twoja maciez stoachtyczna: \n{self.__matrix_stochastic}")
+        self.show_linear_equations()
         self.calc_values()
 
     def show_linear_equations(self):
